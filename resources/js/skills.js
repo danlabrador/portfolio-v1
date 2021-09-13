@@ -54,9 +54,7 @@ addSkill('Python 3', 'fab fa-python', 20, 18);
 
 addSkill('C++', 'fas fa-laptop-code', 35, 100, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/b74a2390dfc4127fa5d43fe147425ad0');
 
-addSkill('Python 3', 'fab fa-python', 20, 18);
-
-addSkill('Git', 'fab fa-git', 40, 44);
+addSkill('Git', 'fab fa-git-alt', 40, 44);
 
 addSkill('GitHub', 'fab fa-github', 20, 100, "https://www.codecademy.com/profiles/daniellabrador_/certificates/358e250fca144526a6b2934ff44fbc01");
 
