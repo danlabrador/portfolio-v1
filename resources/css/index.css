@@ -46,7 +46,6 @@ p {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px;
     justify-content: center;
-    background-color: gray;
 }
 
 .col-span-2 { grid-column-end: span 6; }
@@ -187,6 +186,7 @@ p {
 
 
 /*--- Decorative Header 2 ---*/
+
 .roadmap {
     display: grid;
     justify-items: center;
@@ -307,7 +307,7 @@ p.milestone {
 }
 
 #milestone-button {
-    min-height: calc(50em/16);
+    min-height: 3.125em;
     position: relative;
     left: -1em;
     grid-column: 1 / span 2;
@@ -322,7 +322,7 @@ p.milestone {
     }
 
 #milestone-button button {
-    height: calc(50em/16);
+    height: 3.125em;
     z-index: 1;
     border: 0px solid;
     color: white;
@@ -350,7 +350,103 @@ p.milestone {
 
 
 
+/*--- Skills Container ---*/
+
+.icons {
+    display: flex;
+    align-items: flex-end;
+    gap: .5em;
+}
+
+.skill {
+    padding: 1.25em;
+    width: 100%;
+    background-color: white;
+}
+
+.skill-icon {
+    font-size: 3.75rem;
+    color: #AAA;
+}
+
+.codecademy-badge img {
+    height: 1em;
+}
+
+.badges {
+    display: flex;
+    gap: .25em;
+}
+
+.badges img {
+    filter: invert(80%) sepia(8%) saturate(8%) hue-rotate(360deg) brightness(85%) contrast(89%);
+}
+
+.badges img:hover {
+    filter: invert(19%) sepia(11%) saturate(2535%) hue-rotate(160deg) brightness(102%) contrast(89%);
+}
+
+.skill-text {
+    font-weight: 900;
+    margin: .5em 0;
+}
+
+.progress-bar {
+    position: relative;
+    height: .3125em;
+    width: 100%;
+    background-color: #AAA;
+}
+
+.progress-bar:nth-child(4){
+    content:"";
+    margin-top: 1.25em;
+}
+
+.progress-percent {
+    height: 100%;
+    width: 40%;
+}
+
+.education .progress-percent {
+    background-color: #48ACF0;
+}
+
+.experience .progress-percent {
+    background-color: #FF8B00;
+}
+
+.progress-peg {
+    position: absolute;
+    height: calc(15em/16);
+    width: calc(15em/16);
+    top: calc(-5em/16);
+    left: calc(40% - .75em);
+    border-radius: 50%;
+    color: rgba(1,1,1,0);
+}
+
+.education .progress-peg {
+    background-color: #48ACF0;
+}
+
+.experience .progress-peg {
+    background-color: #FF8B00;
+}
+
+
+
 /*--- Helper Classes ---*/
 .uppercase {
     text-transform: uppercase;
 }
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
