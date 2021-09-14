@@ -5,7 +5,7 @@ function isVector(logo, skill){
     let formatB = logo[logo.length-5] + logo[logo.length-4] + logo[logo.length-3]
     + logo[logo.length-2] + logo[logo.length-1];
 
-    const format = [formatA, formatB], validFormats = ['.svg', '.jpeg', 'png', '.SVG', '.JPEG', '.PNG', '.jpg', '.JPG'];
+    const format = [formatA, formatB], validFormats = ['.svg', '.jpeg', 'png', '.SVG', '.JPEG', '.PNG', '.jpg', '.JPG', '.WEBP', '.webp'];
     let isValid = false;
 
     for (let i=0; i<format.length; ++i){
@@ -115,14 +115,13 @@ function addSkill(skill, logo, start, xp, edu=-1, badge1, badge2, badge3){
                 <span class="tooltiptext noselect bottom">Codecademy: ${edu}%</span>
                 <div class="progress-percent"></div>
                 <div class="progress-peg noselect">${edu}%</div>
-            </div>
+            </div> 
 
         </div>
     `;
 }
 
-// refactor to: skill, logo, xp, [month, year], edu (-1 if n/a), badge1, badge2, badge3
-// skill, logo, xp, edu (-1 if n/a), badge1, badge2, badge3
+// skill, logo, xp, [month, year], edu (-1 if n/a), badge1, badge2, badge3
 addSkill('HTML 5', 'fab fa-html5', [6, 2021], 65, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7');
 
 addSkill('CSS 3', 'fab fa-css3-alt', [6, 2021], 55, 53, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9a5bb1fc45b4281af1fffec93b0aaf05', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/3a62023b0054dc793edc0adecd715fd7');

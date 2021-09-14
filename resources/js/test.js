@@ -15,4 +15,4 @@ function timeXP(month, year){
     return [monthXP, yearXP];
 }
 
-console.log(timeXP(9, 2021))
+console.log(timeXP(9, 2021));
