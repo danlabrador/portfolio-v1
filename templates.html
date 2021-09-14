@@ -21,21 +21,42 @@
 
     <!--------------  HEADER  ----------------->
         <header>
-            
-            <div class="nav-bar">
+            <!-- Add .clear-nav-bar if .nav-bar should be clear  -->
+            <div class="nav-bar" id="nav-bar">
 
                 <div class="mobile-menu nav-bar-element" id="mobile-menu-open">
                     <span class="noselect">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><style>path {fill: #fff}</style><g fill="var(--color-default)"><path d="M8 14h7a1 1 0 000-2H8a1 1 0 000 2zM1 4h14a1 1 0 000-2H1a1 1 0 000 2zM1 9h14a1 1 0 000-2H1a1 1 0 000 2z"></path></g></svg>
                     </span>
                 </div>
+                <div class="main-navigation-items">
+                    <h1 class="main-logo-container nav-bar-element">
+                        <span class="main-logo-text noselect">Daniel Labrador</span>
+                        <a href="http://daniellabrador.me" class = "main-logo-link">
+                            <img id="main-logo" src="./resources/img/logo/SVG/logo-light.svg" alt="Brand logo" class="main-logo mobile">
+                        </a>
+                    </h1>
 
-                <h1 class="main-logo-container nav-bar-element">
-                    <span class="main-logo-text noselect">Daniel Labrador</span>
-                    <a href="http://daniellabrador.me" class = "main-logo-link">
-                        <img src="./resources/img/logo/SVG/logo-light.svg" alt="Brand logo" class="main-logo mobile">
-                    </a>
-                </h1>
+                    <nav class="desktop-nav">
+                        <ul>
+                            <a href="#">
+                                <li>About</li>
+                            </a>
+                            <a href="#">
+                                <li>Skills</li>
+                            </a>
+                            <a href="#">
+                                <li>Projects</li>
+                            </a>
+                            <a href="#">
+                                <li>Services</li>
+                            </a>
+                            <a href="#">
+                                <li>Contact</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
 
                 <div class="social nav-bar-element">
 
@@ -58,6 +79,7 @@
                     </a>
                 </div>
             </div>
+            <!-- To prevent reference error, I have to create this class --><div class="clear-nav-bar" style="display:none"></div>
             <nav class="mobile-nav" id="mobile-nav">
                 <div class="social">
 
@@ -81,9 +103,6 @@
                 </div>
                 <hr>
                 <ul>
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
                     <a href="#">
                         <li>About</li>
                     </a>
@@ -295,7 +314,7 @@
                             <div class="form-field">
                                 <label for="email-subject">I would like to <span>*</span></label>
                                 <select id="email-subject" name="email-subject" required="">
-                                    <option value="" selected="" disabled="" class="option-default" hidden="">--- What do you want to talk about? --</option>
+                                    <option value="" selected="" disabled="" class="option-default" hidden=""></option>
                                     <option value="[JOB] I would like to invite you to apply for a job vacancy.">Invite you to apply for a job vacancy</option>
                                     <option value="[JOB] I would like to hire you for a project.">Hire you for a project</option>
                                     <option value="[JOB] I would like to find more about your services.">Find more about your services</option>

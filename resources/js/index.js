@@ -12,6 +12,28 @@ mobileMenuClose.addEventListener('click', function(){
 });
 
 
+// Interactive Navigation Bar On Scroll ----------------------------------------
+const navBar = document.getElementById('nav-bar');
+const clearNavBar = document.getElementsByClassName('clear-nav-bar')[0];
+const mainLogo = document.getElementById('main-logo');
+
+
+
+function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      navBar.style.height = "3.5em";
+      clearNavBar.style.backgroundColor = 'rgba(51,51,51,1)';
+      mainLogo.style.height = "0.75em";
+
+    } else {
+      navBar.style.height = "4em";
+      clearNavBar.style.backgroundColor = 'rgba(51,51,51,0)';
+      mainLogo.style.height = "1em";
+    }
+}
+
+window.addEventListener('scroll', scrollFunction);
+
 // Roadmap grid box positioning and design -------------------------------------
 
 // Alternate box positioning to grid: right and left
