@@ -1,3 +1,17 @@
+// Mobile Menu -----------------------------------------------------------------
+const mobileNav = document.getElementById('mobile-nav');
+
+const mobileMenuOpen = document.getElementById('mobile-menu-open');
+mobileMenuOpen.addEventListener('click', function(){
+    mobileNav.style.right = 0;
+});
+
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+mobileMenuClose.addEventListener('click', function(){
+    mobileNav.style.right = '-100%';
+});
+
+
 // Roadmap grid box positioning and design -------------------------------------
 
 // Alternate box positioning to grid: right and left
