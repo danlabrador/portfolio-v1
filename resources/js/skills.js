@@ -15,13 +15,34 @@ function isVector(logo, skill){
     }
 
     if (isValid){
-        return `<img class="skill-icon" src="./resources/img/skills-container/${logo}" alt="${skill} logo">`;
+        return `<img class="noselect skill-icon" src="./resources/img/skills-container/${logo}" alt="${skill} logo">`;
     } else {
         return `<i class="skill-icon ${logo}"></i>`;
     }
 }
 
-function addSkill(skill, logo, xp, edu=-1, badge1, badge2, badge3){
+function getTimeXP(month, year){
+    let monthStart = month, yearStart = year;
+    
+    const currentTime = new Date();
+    let monthNow = currentTime.getMonth()+2, yearNow = currentTime.getFullYear();
+
+    if (year < 1900){
+        return [month, year];
+    }
+
+    if (monthNow<monthStart){
+        monthNow += 12;
+        --yearNow;
+    }
+
+    const monthXP = monthNow-monthStart;
+    const yearXP = yearNow-yearStart;
+    
+    return [monthXP, yearXP];
+}
+
+function addSkill(skill, logo, start, xp, edu=-1, badge1, badge2, badge3){
     const skillsContainer = document.getElementById('skills');
     const skillLogo = isVector(logo, skill);
     let badgeA, badgeB, badgeC, eduBar;
@@ -30,75 +51,105 @@ function addSkill(skill, logo, xp, edu=-1, badge1, badge2, badge3){
     badge3 ? badgeC='block' : badgeC='none';
     edu===-1 ? eduBar='none' : eduBar='block';
 
+    const timeXP = getTimeXP(start[0], start[1]);
+    let timeXPTooltip, timeXPMoreThanYear;
+    if (timeXP[1]>1){
+        if(timeXP[0]>1){
+            timeXPTooltip = `Experience:<br>${timeXP[1]} years, ${timeXP[0]} months`;
+            timeXPMoreThanYear = 'xp-more-than-year'
+        } else if(timeXP[0]===1){
+            timeXPTooltip = `Experience:<br>${timeXP[1]} years, ${timeXP[0]} month`;
+            timeXPMoreThanYear = 'xp-more-than-year'
+        } else if(timeXP[0]===0){
+            timeXPTooltip = `Experience: ${timeXP[1]} years`;
+        }
+    } else if (timeXP[1]==1){
+        if(timeXP[0]>1){
+            timeXPTooltip = `Experience:<br>${timeXP[1]} year, ${timeXP[0]} months`;
+            timeXPMoreThanYear = 'xp-more-than-year'
+        } else if(timeXP[0]===1){
+            timeXPTooltip = `Experience:<br>${timeXP[1]} year, ${timeXP[0]} month`;
+            timeXPMoreThanYear = 'xp-more-than-year'
+        } else if(timeXP[0]===0){
+            timeXPTooltip = `Experience: ${timeXP[1]} year`;
+        }
+    } else {
+        if(timeXP[0]>1){
+            timeXPTooltip = `Experience: ${timeXP[0]} months`;
+        } else if(timeXP[0]===1){
+            timeXPTooltip = `Experience: ${timeXP[0]} month`;
+        }
+    }
+
     skillsContainer.innerHTML += `
         <div class="skill col-span-2">
             <div class="icons">
                 ${skillLogo}
                 <div class="badges">
                     <a class="codecademy-badge tooltip right" href="${badge1}" target="_blank">
-                        <img src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeA}'>
-                        <span class="tooltiptext bottom">Codecademy Certificate</span>
+                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeA}'>
+                        <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
 
                     <a class="codecademy-badge tooltip right" href="${badge2}" target="_blank">
-                        <img src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeB}'>
-                        <span class="tooltiptext bottom">Codecademy Certificate</span>
+                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeB}'>
+                        <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
 
                     <a class="codecademy-badge tooltip right" href="${badge3}" target="_blank">
-                        <img src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeC}'>
-                        <span class="tooltiptext bottom">Codecademy Certificate</span>
+                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeC}'>
+                        <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
                 </div>
             </div>
 
             <h3 class="skill-text">${skill}</h3>
 
-            <div class="education progress-bar tooltip" style="display:${eduBar}">
-                <span class="tooltiptext bottom">Codecademy: ${edu}%</span>
-                <div class="progress-percent"></div>
-                <div class="progress-peg noselect">${edu}%</div>
-            </div>
-
             <div class="experience progress-bar tooltip">
-                <span class="tooltiptext">Experience: ${xp}%</span>
+                <span class="tooltiptext noselect ${timeXPMoreThanYear}" >${timeXPTooltip}</span>
                 <div class="progress-percent"></div>
                 <div class="progress-peg noselect">${xp}%</div>
+            </div>
+
+            <div class="education progress-bar tooltip" style="display:${eduBar}">
+                <span class="tooltiptext noselect bottom">Codecademy: ${edu}%</span>
+                <div class="progress-percent"></div>
+                <div class="progress-peg noselect">${edu}%</div>
             </div>
 
         </div>
     `;
 }
 
-
+// refactor to: skill, logo, xp, [month, year], edu (-1 if n/a), badge1, badge2, badge3
 // skill, logo, xp, edu (-1 if n/a), badge1, badge2, badge3
-addSkill('HTML 5', 'fab fa-html5', 65, 100, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7');
+addSkill('HTML 5', 'fab fa-html5', [6, 2021], 65, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7');
 
-addSkill('CSS 3', 'fab fa-css3-alt', 55, 53, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9a5bb1fc45b4281af1fffec93b0aaf05', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/3a62023b0054dc793edc0adecd715fd7');
+addSkill('CSS 3', 'fab fa-css3-alt', [6, 2021], 55, 53, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9a5bb1fc45b4281af1fffec93b0aaf05', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/3a62023b0054dc793edc0adecd715fd7');
 
-addSkill('Sass', 'fab fa-sass', 30, 100, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/eb1ffda40f347629dcef6de33d3f9741');
+addSkill('Sass', 'fab fa-sass', [1, 0], 20, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/eb1ffda40f347629dcef6de33d3f9741'); // April 2018
 
-addSkill('JavaScript', 'fab fa-js', 45, 64, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/705dcb15de0da4dd9d9fc4f3274b430e');
+addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, 64, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/705dcb15de0da4dd9d9fc4f3274b430e');
 
-addSkill('Node.js', 'fab fa-node-js', 50, 17);
+addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
-addSkill('Python 3', 'fab fa-python', 20, 18);
+addSkill('Python 3', 'fab fa-python', [8, 2021], 20, 18);
 
-addSkill('C++', 'c++.svg', 35, 100, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/b74a2390dfc4127fa5d43fe147425ad0');
+addSkill('C++', 'c++.svg', [9, 2021], 35, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/b74a2390dfc4127fa5d43fe147425ad0');
 
-addSkill('Git', 'fab fa-git-alt', 40, 44);
+addSkill('Git', 'fab fa-git-alt', [7, 2021], 40, 44);
 
-addSkill('GitHub', 'fab fa-github', 20, 100, "https://www.codecademy.com/profiles/daniellabrador_/certificates/358e250fca144526a6b2934ff44fbc01");
+addSkill('GitHub', 'fab fa-github', [7, 2021], 20, -1, "https://www.codecademy.com/profiles/daniellabrador_/certificates/358e250fca144526a6b2934ff44fbc01");
 
-addSkill('Photoshop', 'photoshop.svg', 75, -1);
+addSkill('Photoshop', 'photoshop.svg', [7, 2013], 75, -1);
 
-addSkill('Premiere Pro', 'premiere.svg', 60, -1);
+addSkill('Premiere Pro', 'premiere.svg', [5, 2020], 55, -1);
 
-addSkill('Illustrator', 'illustrator.svg', 55, -1);
+addSkill('Illustrator', 'illustrator.svg', [6, 2020], 45, -1);
 
-addSkill('WordPress', 'fab fa-wordpress', 40, -1);
+addSkill('WordPress', 'fab fa-wordpress', [2, 2020], 40, -1);
 
-addSkill('Figma', 'fab fa-figma', 25, -1);
+addSkill('Figma', 'fab fa-figma', [9, 2021], 25, -1);
 
 // addSkill('React', 'fab fa-react', 10, -1);
 
