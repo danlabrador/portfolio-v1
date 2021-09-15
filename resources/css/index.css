@@ -350,6 +350,7 @@ footer {
     position: relative;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     background-color: #666;
     height: calc(40rem - 15vh);
 }
@@ -364,6 +365,7 @@ footer {
 #contact {
     position: absolute;
     top: -8em;
+    width: 100% !important;
 }
 
 @media only screen and (max-width: 1200px) {
