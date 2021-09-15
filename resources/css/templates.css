@@ -653,7 +653,6 @@ p.milestone {
 .skill {
     padding: 1.25em;
     width: 100%;
-    background-color: white;
 }
 
 .skill-icon {
@@ -1023,8 +1022,8 @@ p.milestone {
 }
 
 .fancy-button:hover {
-    top: .25em;
-    left: -.35em;
+    top: .3em;
+    left: -.4em;
     transition: all .15s;
 }
 
@@ -1042,8 +1041,8 @@ p.milestone {
 }
 
 .fancy-button:hover::after {
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: 1px;
     transition: all .15s;
 }
 
@@ -1143,3 +1142,8 @@ footer .copyright a:visited {
 .no-text-decoration {
     text-decoration: none;
 }
+
+
+
+
+/*  */

@@ -43,7 +43,7 @@ function getTimeXP(month, year){
 }
 
 function addSkill(skill, logo, start, xp, edu=-1, badge1, badge2, badge3){
-    const skillsContainer = document.getElementById('skills');
+    const skillsContainer = document.getElementById('skill-generator');
     const skillLogo = isVector(logo, skill);
     let badgeA, badgeB, badgeC, eduBar;
     badge1 ? badgeA='block' : badgeA='none';
