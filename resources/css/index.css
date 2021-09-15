@@ -2,7 +2,7 @@
 header {
     position: relative;
     display: grid;
-    grid-template-rows: 3.125em 6fr 11vh;
+    grid-template-rows: 3.125em 1fr 11vh;
     
     /* height: 100vh; */
     height: 35em;
@@ -13,6 +13,7 @@ header {
     background-size: cover;
     background-position:  75%;
     background-repeat: no-repeat;
+    z-index: 0;
 }
 
 @media only screen and (min-width: 450px) {
@@ -21,9 +22,10 @@ header {
     }
 }
 
-@media only screen and (min-width: 1074px) {
+@media only screen and (min-width: 1100px) {
     header {
         grid-template-rows: 4em 1fr 15vh;
+        height: 38em;
     }
 }
 
@@ -33,6 +35,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (min-width: 700px) {
+    #home {
+        justify-content: flex-start;
+        padding: 0 10%;
+    }
+}
+
+#home .flex-container {
+    flex-direction: column;
 }
 
 #home .site-intro {
@@ -48,6 +61,18 @@ header {
     color: white;
 }
 
+@media only screen and (min-width: 600px) {
+    #home .site-intro h2 {
+        font-size: 5.625rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #home .site-intro h2 {
+        font-size: 6rem;
+    }
+}
+
 #home .site-intro h2::after {
     position: absolute;
     top: -2vw;
@@ -60,6 +85,27 @@ header {
     border-right: 2px dotted #48ACF0;
 }
 
+@media only screen and (min-width: 700px) {
+    #home .site-intro h2::after {
+        border-top: 0px dotted #48ACF0;
+        border-right: 0px dotted #48ACF0;
+    }
+}
+
+#home #site-intro-header-stretched {
+    display: none;
+}
+
+@media only screen and (min-width: 1100px) {
+    #home #site-intro-header-stretched {
+        display: block;
+    }
+
+    #home #site-intro-header-compressed {
+        display: none;
+    }
+}
+
 #home .site-intro p {
     position: relative;
     margin-top: 0;
@@ -67,6 +113,28 @@ header {
     letter-spacing: 0.075em;
     text-align: right;
     color: white;
+}
+
+@media only screen and (min-width: 600px) {
+    #home .site-intro p {
+        font-size: 1.625rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #home .site-intro p {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #home .site-intro p {
+        margin-bottom: .25em;
+
+        font-size: 3.4375rem;
+        font-weight: 300;
+        letter-spacing: 0;
+    }
 }
 
 #home .site-intro p::after {
@@ -81,6 +149,23 @@ header {
     border-left: 2px dotted #FF8B00;
 }
 
+@media only screen and (min-width: 700px) {
+    #home .site-intro p::after {
+        border-bottom: 0px dotted #48ACF0;
+        border-left: 0px dotted #48ACF0;
+    }
+}
+
+#home .hero-buttons {
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+    #home .hero-buttons {
+        text-align: left;
+    }
+}
+
 #home-divider {
     position: relative;
     top: 1px;
@@ -88,5 +173,5 @@ header {
     background-image: url('../img/dividers/triangle-uneven-bottom.svg');
     background-position: 25% top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
