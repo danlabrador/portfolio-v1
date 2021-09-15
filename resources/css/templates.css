@@ -56,6 +56,7 @@ section {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px;
     justify-content: center;
+    -webkit-justify-content: center;
 }
 
 .col-span-2 { grid-column-end: span 6; }
@@ -107,7 +108,9 @@ section {
 
 .flex-container {
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-justify-content: center;
 }
 
 
@@ -155,6 +158,7 @@ nav a {
     justify-self: start;
     align-content: center;
     display: flex;
+    display: -webkit-flex;
 }
 
 /* Social */
@@ -168,6 +172,7 @@ nav a {
     @media only screen and (min-width: 700px) {
         .social {
             display: flex;
+            display: -webkit-flex;
         }
     }
 
@@ -207,6 +212,7 @@ h1.main-logo-container .main-logo-text {
 
 h1.main-logo-container .main-logo-link {
     display: flex;
+    display: -webkit-flex;
     margin: auto auto;
     padding-right: .5em;
 }
@@ -249,7 +255,9 @@ header .main-logo {
 
 .mobile-nav .social {
     display: flex;
+    display: -webkit-flex;
     justify-content: end;
+    -webkit-justify-content: end;
     padding: 0;
 }
 
@@ -334,14 +342,17 @@ header .main-logo {
 @media only screen and (min-width: 700px) {
     .desktop-nav {
         display: flex;
+        display: -webkit-flex;
     }
 
     .desktop-nav ul {
         display: flex;
+        display: -webkit-flex;
     }
 
     .desktop-nav ul a {
         display: flex;
+        display: -webkit-flex;
         align-items: center;
         margin: 0 .5em;
     }
@@ -375,16 +386,19 @@ header .main-logo {
 
 .hdecor-box {
     display: flex;
+    display: -webkit-flex;
     min-width: 200px;
 }
 
 .hdecor-box.center{
     justify-content: flex-start;
+    -webkit-justify-content: flex-start;
 }
 
     @media only screen and (min-width: 800px) {
         .hdecor-box.center{
             justify-content: center;
+            -webkit-justify-content: center;
         }
     }
 
@@ -654,6 +668,7 @@ p.milestone {
 
 .icons {
     display: flex;
+    display: -webkit-flex;
     align-items: flex-end;
     gap: .5em;
 }
@@ -675,6 +690,7 @@ p.milestone {
 
 .badges {
     display: flex;
+    display: -webkit-flex;
     gap: .25em;
 }
 
@@ -810,6 +826,7 @@ p.milestone {
 /*--- Project Section ---*/
 .project {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0.025em .25em .0625em rgba(0, 0, 0, 0.125);
@@ -952,6 +969,7 @@ p.milestone {
 
 #contact .form-row {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     gap: .75em;
     margin: 1em;
@@ -1073,13 +1091,16 @@ p.milestone {
 /*--- Helper Classes ---*/
 footer {
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
+    -webkit-justify-content: center;
     background-color: #333;
 }
 
     @media only screen and (min-width: 550px) {
         footer {
             justify-content: space-between;
+            -webkit-justify-content: space-between;
         }
     }
 
@@ -1106,6 +1127,7 @@ footer .copyright a:visited {
 @media only screen and (min-width: 550px) {
     footer .social {
         display: flex;
+        display: -webkit-flex;
     }
 }
 
