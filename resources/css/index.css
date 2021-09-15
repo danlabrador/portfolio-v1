@@ -365,7 +365,6 @@ footer {
 #contact {
     position: absolute;
     top: -8em;
-    width: 100% !important;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -376,7 +375,6 @@ footer {
 }
 
 #copyright {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #666;

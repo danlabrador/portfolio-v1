@@ -648,6 +648,10 @@ p.milestone {
 
 /*--- Skills Container ---*/
 
+#skills {
+    overflow: hidden;
+}
+
 .icons {
     display: flex;
     align-items: flex-end;
