@@ -88,6 +88,17 @@ section {
     @media only screen and (min-width: 1120px) {
         .col-span-6 { grid-column-end: span 6; } }
 
+.col-span-8 { grid-column-end: span 12; }
+
+    @media only screen and (min-width: 1120px) {
+    .col-span-8 { grid-column-end: span 8; } }
+
+.col-span-8-center { grid-column-end: span 12; }
+
+    @media only screen and (min-width: 1120px) {
+    .col-span-8-center { grid-column-end: span 8;
+                         grid-column-start: 3;} }
+
 .col-span-12 { grid-column-end: span 12; }
 
 .flex-container {
@@ -99,6 +110,7 @@ section {
 /*--- Navigation Bar ---*/
 header {
     position: relative;
+    z-index: 100 !important
 }
 
 header .nav-bar {
@@ -568,6 +580,14 @@ h3.milestone {
 p.milestone {
     line-height: 1.5em;
     margin: 0 0 .75em 0;
+}
+
+.milestone-company {
+    color: #666;
+}
+
+.milestone-type {
+    color: #ff7300;
 }
 
 .milestone-description {
@@ -1118,4 +1138,8 @@ footer .copyright a:visited {
     .mobile-view {
         display: none !important;
     }
+}
+
+.no-text-decoration {
+    text-decoration: none;
 }

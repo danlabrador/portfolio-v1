@@ -1,3 +1,8 @@
+header .nav-bar {
+    position: fixed;
+    z-index: 10;
+}
+
 /*----- HOME SECTION -----*/
 header {
     position: relative;
@@ -173,5 +178,50 @@ header {
     background-image: url('../img/dividers/triangle-uneven-bottom.svg');
     background-position: 25% top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+}
+
+
+
+
+/*----- ABOUT SECTION -----*/
+#home {
+    position: relative;
+    z-index: 0;
+}
+
+#home-header-about {
+    margin-top: 2em;
+}
+
+#home-header-about h2 {
+    margin-bottom: 0;
+}
+
+#home-header-about .hdecor-left,
+#home-header-about .hdecor-right {
+    margin-bottom: .75em;
+}
+
+#home-header-description {
+    margin-top: 0;
+    text-align: left;
+}
+
+@media only screen and (min-width: 800px) {
+    #home-header-description {
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+#home-milestones {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 3.125em;
+}
+
+#home-milestones .milestone-box {
+    position: relative;
+    z-index: 0;
 }
