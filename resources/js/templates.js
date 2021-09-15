@@ -11,6 +11,14 @@ mobileMenuClose.addEventListener('click', function(){
     mobileNav.style.right = '-100%';
 });
 
+// Close mobile menu when click link
+const mobileLinks = document.getElementsByClassName('mobile-link');
+for (let i=0; i<mobileLinks.length; ++i){
+    mobileLinks[i].addEventListener('click', function(){
+        mobileNav.style.right = '-100%';
+    });
+}
+
 
 // Interactive Navigation Bar On Scroll ----------------------------------------
 const navBar = document.getElementById('nav-bar');
