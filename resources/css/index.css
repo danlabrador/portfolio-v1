@@ -171,11 +171,11 @@ header {
     }
 }
 
-#home-divider {
+#home-hero-divider {
     position: relative;
     top: 1px;
     grid-area: 3 / 1 / span 1 / span 1;
-    background-image: url('../img/dividers/triangle-uneven-bottom.svg');
+    background-image: url('../img/dividers/triangle-uneven-bottom-fff.svg');
     background-position: 25% top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,10 +233,149 @@ header {
 #skills {
     background-image:   linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
                         url('../img/index/paper-bg.jpg');
-    margin-bottom: 3em;
+    padding-bottom: 3em;
 }
 
 #skills .hdecor-box {
     margin-left: 1em;
     margin-top: 2.5em;
+}
+
+
+
+
+/*--- Projects ---*/
+#projects {
+    padding: 1em 0 5em;
+    background-color: #DDD;
+}
+
+#projects .hdecor-box {
+    margin-left: 2.5em;
+    margin-top: 1em;
+}
+
+#projects .hdecor-box h2 {
+    margin-bottom: 0;
+}
+
+#projects .hdecor-right {
+    margin-bottom: .75em;
+}
+
+#home-projects-more {
+    display: inline;
+    margin: 3em 0 0 5%;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 1101px) {
+    #home-projects-more {
+        margin: 3em 0 0 2.25em;
+    }
+}
+
+#home-projects-more:hover,
+#home-projects-more:hover > i {
+    opacity: .625;
+}
+
+#home-projects-more i {
+    font-size: .5em;
+}
+
+
+
+
+/*--- Services ---*/
+#services {
+    display: grid;
+    grid-template-rows: auto auto 11vh;
+    padding: 1em 0 0;
+}
+
+@media only screen and (min-width: 1100px) {
+    #services {
+        grid-template-rows: auto auto 15vh;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #services {
+        grid-template-rows: auto auto
+    }
+}
+
+#services .hdecor-box {
+    margin-left: 2.5em;
+    margin-top: 1em;
+}
+
+#services .hdecor-box h2 {
+    margin-bottom: 0;
+}
+
+#services .hdecor-right {
+    margin-bottom: .75em;
+}
+
+#services .services-container {
+    margin-bottom: 5em;
+}
+
+#home-services-divider {
+    display:none;
+    position: relative;
+    top: 1px;
+    grid-area: 3 / 1 / span 1 / span 1;
+    background-image: url('../img/dividers/triangle-basic-bottom-666.svg');
+    background-position: 25% top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 1200px) {
+    #home-services-divider {
+        display: block;
+    }
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-color: #666;
+    height: calc(40rem - 15vh);
+}
+
+@media only screen and (max-width: 1200px) {
+    footer {
+        display: block;
+        height: calc(40rem - 15vh);
+    }
+}
+
+#contact {
+    position: absolute;
+    top: -8em;
+}
+
+@media only screen and (max-width: 1200px) {
+    #contact {
+        position: relative;
+        top: 0em;
+    }
+}
+
+#copyright {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #666;
 }

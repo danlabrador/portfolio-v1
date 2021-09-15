@@ -808,6 +808,7 @@ p.milestone {
     border-radius: .75em;
     overflow: hidden;
     margin: 5%;
+    background-color: white;
 }
 
     @media only screen and (min-width:550px) {
@@ -819,11 +820,12 @@ p.milestone {
 
 .project:hover {
     box-shadow: 0 0 1em .0625em rgba(0, 0, 0, 0.15);
-    transition: box-shadow 0.25s;
+    transform: scale(1.01);
+    transition: all 0.25s;
 }
 
 .project:not(:hover) {
-    transition: box-shadow 0.25s;
+    transition: all 0.25s;
 }
 
 .project-image {
