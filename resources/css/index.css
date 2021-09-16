@@ -269,6 +269,10 @@ header {
     text-decoration: none;
 }
 
+#home-projects-more .fa-github {
+    font-size: 1rem;
+}
+
 @media only screen and (min-width: 1101px) {
     #home-projects-more {
         margin: 3em 0 0 2.25em;
