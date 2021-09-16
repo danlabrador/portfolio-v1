@@ -937,7 +937,7 @@ p.milestone {
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
-    background-image: linear-gradient(rgba(18, 8, 78, 0.25), rgba(71, 21, 2, 0.25)), url('../img/contact/contact-background.jpg');
+    background-image: linear-gradient(rgba(18, 8, 78, 0.25), rgba(71, 21, 2, 0.25)), url('../img/index/contact/contact-background.jpg');
     background-size: cover;
     background-position: center;
 }

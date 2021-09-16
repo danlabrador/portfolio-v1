@@ -15,7 +15,7 @@ function isVector(logo, skill){
     }
 
     if (isValid){
-        return `<img class="noselect skill-icon" src="./resources/img/skills-container/${logo}" alt="${skill} logo">`;
+        return `<img class="noselect skill-icon" src="./resources/img/index/skills/${logo}" alt="${skill} logo">`;
     } else {
         return `<i class="skill-icon ${logo}"></i>`;
     }
@@ -87,17 +87,17 @@ function addSkill(skill, logo, start, xp, edu=-1, badge1, badge2, badge3){
                 ${skillLogo}
                 <div class="badges">
                     <a class="codecademy-badge tooltip right" href="${badge1}" target="_blank">
-                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeA}'>
+                        <img class="noselect" src="./resources/img/index/skills/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeA}'>
                         <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
 
                     <a class="codecademy-badge tooltip right" href="${badge2}" target="_blank">
-                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeB}'>
+                        <img class="noselect" src="./resources/img/index/skills/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeB}'>
                         <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
 
                     <a class="codecademy-badge tooltip right" href="${badge3}" target="_blank">
-                        <img class="noselect" src="./resources/img/skills-container/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeC}'>
+                        <img class="noselect" src="./resources/img/index/skills/codecademy-badge.svg" alt="Codecademy Badge" style='display:${badgeC}'>
                         <span class="tooltiptext noselect bottom">Codecademy Certificate</span>
                     </a>
                 </div>
