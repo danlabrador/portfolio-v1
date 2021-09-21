@@ -128,7 +128,7 @@ addSkill('CSS 3', 'fab fa-css3-alt', [6, 2021], 55, 53, 'https://www.codecademy.
 
 addSkill('Sass', 'fab fa-sass', [1, 0], 20, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/eb1ffda40f347629dcef6de33d3f9741'); // April 2018
 
-addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, 64, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/705dcb15de0da4dd9d9fc4f3274b430e', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/f4276e8c08a3ba174ef0147deb0c3013');
+addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/705dcb15de0da4dd9d9fc4f3274b430e', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/f4276e8c08a3ba174ef0147deb0c3013', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/512386fdc7f6c934f98b01e6afa8285a');
 
 addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
