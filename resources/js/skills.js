@@ -130,6 +130,8 @@ addSkill('Sass', 'fab fa-sass', [1, 0], 20, -1, 'https://www.codecademy.com/prof
 
 addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/705dcb15de0da4dd9d9fc4f3274b430e', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/f4276e8c08a3ba174ef0147deb0c3013', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/512386fdc7f6c934f98b01e6afa8285a');
 
+addSkill('jQuery', 'jquery.svg', [9, 2021], 30, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/0becf7c1cd2bd715f24331dddd23425a');
+
 addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
 addSkill('Python 3', 'fab fa-python', [8, 2021], 20, 18);
