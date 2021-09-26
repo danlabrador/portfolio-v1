@@ -806,12 +806,16 @@ footer .copyright a:visited {
 .social {
   display: none;
   padding: 1rem 2rem 1rem 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 0.5em;
 }
 
 @media only screen and (min-width: 700px) {
   .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
   }
@@ -822,10 +826,14 @@ footer .copyright a:visited {
 
 .social i:hover {
   opacity: 0.75;
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
 
 .social i:not(:hover) {
+  -webkit-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
 
