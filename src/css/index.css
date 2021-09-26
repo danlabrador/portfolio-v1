@@ -620,6 +620,25 @@ footer .copyright a:visited {
     display: -webkit-flex;
   }
 }
+#copyright {
+  display: grid !important;
+  grid-template-columns: inherit 1fr inherit;
+  padding-bottom: 0.5em;
+}
+
+#copyright p {
+  grid-area: 1/1/span 1/span 3;
+}
+
+@media only screen and (min-width: 550px) {
+  #copyright p {
+    grid-area: 1/1/span 1/span 1;
+  }
+
+  #copyright .social {
+    grid-area: 1/2/span 1/span 1;
+  }
+}
 .fancy-button {
   position: relative;
   top: 0;

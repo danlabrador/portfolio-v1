@@ -1,7 +1,11 @@
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-justify-content: center;
   min-height: 3.375em;
   background-color: #333;
@@ -9,7 +13,9 @@ footer {
 
 @media only screen and (min-width: 550px) {
   footer {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-justify-content: space-between;
   }
 }
@@ -36,7 +42,50 @@ footer .copyright a:visited {
 
 @media only screen and (min-width: 550px) {
   footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
+  }
+}
+
+
+#copyright {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: inherit 1fr inherit;
+  grid-template-columns: inherit 1fr inherit;
+  padding-bottom: 0.5em;
+}
+
+#copyright p {
+  -ms-grid-row: 1;
+      grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+      grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1 / 1 / span 1 / span 3;
+}
+
+@media only screen and (min-width: 550px) {
+  #copyright p {
+    -ms-grid-row: 1;
+        grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+        grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
+
+  #copyright .social {
+    -ms-grid-row: 1;
+        grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+        grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / span 1 / span 1;
   }
 }

@@ -1,13 +1,11 @@
 // Mobile Menu -----------------------------------------------------------------
 const mobileNav = document.getElementById('mobile-nav');
 
-const mobileMenuOpen = document.getElementById('mobile-menu-open');
-mobileMenuOpen.addEventListener('click', function(){
+$('#mobile-menu-open').on('click', function(){
     mobileNav.style.right = 0;
 });
 
-const mobileMenuClose = document.getElementById('mobile-menu-close');
-mobileMenuClose.addEventListener('click', function(){
+$('#mobile-menu-close').on('click', function(){
     mobileNav.style.right = '-100%';
 });
 
@@ -24,21 +22,6 @@ for (let i=0; i<mobileLinks.length; ++i){
 const navBar = document.getElementById('nav-bar');
 const clearNavBar = document.getElementsByClassName('clear-nav-bar')[0];
 const mainLogo = document.getElementById('main-logo');
-
-
-// Add smooth scroll support ---------------------------------------------------
-$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (t) {
-    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-        var e = $(this.hash);
-        e = e.length ? e : $("[name=" + this.hash.slice(1) + "]"), e.length && (t.preventDefault(), $("html, body").animate({
-            scrollTop: e.offset().top
-        }, 600, function () {
-            var t = $(e);
-            if (t.focus(), t.is(":focus")) return !1;
-            t.attr("tabindex", "-1"), t.focus()
-        }))
-    }
-});
 
 
 
@@ -84,3 +67,20 @@ milestoneBox.item(milestoneBox.length-1).style.paddingBottom = '3.75em';
 
 const milestoneBtn = document.getElementById('milestone-button');
 milestoneBtn.style.gridRowStart = milestoneBox.length+1;
+
+
+
+
+// Add smooth scroll support ---------------------------------------------------
+$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (t) {
+    if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
+        var e = $(this.hash);
+        e = e.length ? e : $("[name=" + this.hash.slice(1) + "]"), e.length && (t.preventDefault(), $("html, body").animate({
+            scrollTop: e.offset().top
+        }, 600, function () {
+            var t = $(e);
+            if (t.focus(), t.is(":focus")) return !1;
+            t.attr("tabindex", "-1"), t.focus()
+        }))
+    }
+});
