@@ -132,6 +132,8 @@ addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, -1, 'https://www.codecademy.c
 
 addSkill('jQuery', 'jquery.svg', [9, 2021], 30, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/0becf7c1cd2bd715f24331dddd23425a');
 
+addSkill('React', 'fab fa-react', [9, 2021], 30, 65);
+
 addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
 addSkill('Python 3', 'fab fa-python', [8, 2021], 20, 18);
@@ -151,8 +153,6 @@ addSkill('Illustrator', 'illustrator.svg', [6, 2020], 45, -1);
 addSkill('WordPress', 'fab fa-wordpress', [2, 2020], 40, -1);
 
 addSkill('Figma', 'fab fa-figma', [9, 2021], 25, -1);
-
-// addSkill('React', 'fab fa-react', 10, -1);
 
 // addSkill('Redux', 'fas fa-laptop-code', 10, -1);
 
