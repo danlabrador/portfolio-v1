@@ -897,10 +897,16 @@ header {
 header .nav-bar {
   top: 0 !important;
   position: fixed;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 3.125em;
+  -webkit-transition: height 0.25s;
+  -o-transition: height 0.25s;
   transition: height 0.25s;
   width: 100%;
   background-color: #333;
@@ -914,6 +920,8 @@ header .nav-bar {
 }
 header .clear-nav-bar {
   background-color: rgba(51, 51, 51, 0);
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
   transition: background-color 0.25s;
 }
 
@@ -928,9 +936,17 @@ nav a {
 }
 
 .main-navigation-items {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-area: 1/1/span 1/span 1;
+  -ms-grid-column-align: start;
   justify-self: start;
+  -ms-flex-line-pack: center;
   align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
 }
@@ -941,6 +957,7 @@ nav a {
 }
 
 #main-logo-container.main-logo-container {
+  display: -ms-grid;
   display: grid;
   padding-left: 0.375em;
   height: 100%;
@@ -960,6 +977,8 @@ nav a {
 }
 
 #main-logo-container.main-logo-container .main-logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
   margin: auto auto;
@@ -968,6 +987,8 @@ nav a {
 
 header .main-logo {
   height: 0.625em;
+  -webkit-transition: height 0.25s;
+  -o-transition: height 0.25s;
   transition: height 0.25s;
 }
 
@@ -982,7 +1003,12 @@ header .main-logo {
 }
 
 .mobile-menu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-area: 1/3/span 1/span 1;
+  -ms-grid-column-align: end;
   justify-self: end;
 }
 
@@ -995,14 +1021,20 @@ header .main-logo {
   padding: 2em;
   top: 0;
   right: -100%;
+  -webkit-transition: right 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -o-transition: right 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transition: right 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-color: #333;
   z-index: 10;
 }
 
 .mobile-nav .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
   -webkit-justify-content: end;
   padding: 0;
@@ -1013,11 +1045,15 @@ header .main-logo {
 }
 
 .mobile-nav .social-icon:hover {
+  -webkit-transition: margin 0.25s;
+  -o-transition: margin 0.25s;
   transition: margin 0.25s;
   margin-top: -0.25rem;
 }
 
 .mobile-nav .social-icon:not(hover) {
+  -webkit-transition: margin 0.25s;
+  -o-transition: margin 0.25s;
   transition: margin 0.25s;
 }
 
@@ -1028,11 +1064,15 @@ header .main-logo {
 }
 
 .mobile-nav ul a:hover {
+  -webkit-transition: margin 0.25s;
+  -o-transition: margin 0.25s;
   transition: margin 0.25s;
   margin-right: 0.75rem;
 }
 
 .mobile-nav ul a:not(hover) {
+  -webkit-transition: margin 0.25s;
+  -o-transition: margin 0.25s;
   transition: margin 0.25s;
 }
 
@@ -1043,11 +1083,15 @@ header .main-logo {
 }
 
 .mobile-nav li:hover {
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
   transition: color 0.25s;
   color: #ffb152;
 }
 
 .mobile-nav li:not(:hover) {
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
@@ -1076,6 +1120,8 @@ header .main-logo {
   width: 0.75rem;
   border-right: 0.19375em solid white;
   border-bottom: 0.19375em solid white;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   cursor: pointer;
 }
@@ -1087,28 +1133,40 @@ header .main-logo {
 
 @media only screen and (min-width: 700px) {
   .desktop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
   }
 
   .desktop-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
   }
 
   .desktop-nav ul a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0 0.5em;
   }
 
   .desktop-nav ul li:hover {
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
     transition: color 0.25s;
     color: #ffb152;
   }
 
   .desktop-nav ul li:not(:hover) {
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
     transition: color 0.25s;
   }
 
@@ -1121,8 +1179,14 @@ header .main-logo {
   }
 
   .nav-bar .social {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
     grid-area: 1/3/span 1/span 1;
-    justify-self: right;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     padding: 1rem;
   }
 }
