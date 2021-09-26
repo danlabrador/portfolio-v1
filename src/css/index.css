@@ -635,13 +635,6 @@ footer .copyright a:visited {
   color: white;
   background-color: #057be9;
 }
-
-.fancy-button:hover {
-  top: 0.3em;
-  left: -0.4em;
-  transition: all 0.15s;
-}
-
 .fancy-button::after {
   box-sizing: border-box !important;
   position: absolute;
@@ -654,7 +647,11 @@ footer .copyright a:visited {
   border: 1.5px solid white;
   z-index: -1;
 }
-
+.fancy-button:hover {
+  top: 0.3em;
+  left: -0.4em;
+  transition: all 0.15s;
+}
 .fancy-button:hover::after {
   top: 1px;
   left: 1px;
