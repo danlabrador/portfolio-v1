@@ -310,3 +310,17 @@ header .main-logo {
     padding: 1rem;
   }
 }
+
+.mobile-nav-content-wrapper {
+  display: grid;
+}
+
+.mobile-nav .social {
+  display: inline-block;
+  margin-left: auto;
+}
+
+.mobile-nav .social-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
