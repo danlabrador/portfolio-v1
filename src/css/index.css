@@ -1,3 +1,4 @@
+/* Colors */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -633,7 +634,6 @@ footer .copyright a:visited {
   display: grid !important;
   -ms-grid-columns: inherit 1fr inherit;
   grid-template-columns: inherit 1fr inherit;
-  padding-bottom: 0.5em;
   background-color: #666;
 }
 
@@ -669,9 +669,13 @@ footer .copyright a:visited {
   }
 }
 .fancy-button {
-  position: relative;
   top: 0;
   left: 0;
+}
+
+/* Colors */
+.fancy-button {
+  position: relative;
   display: inline-block;
   min-width: 5em;
   margin: 0.5em;
@@ -684,6 +688,7 @@ footer .copyright a:visited {
   background-color: #057be9;
 }
 .fancy-button::after {
+  -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   position: absolute;
   top: 0.35em;
@@ -698,11 +703,15 @@ footer .copyright a:visited {
 .fancy-button:hover {
   top: 0.3em;
   left: -0.4em;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
   transition: all 0.15s;
 }
 .fancy-button:hover::after {
   top: 1px;
   left: 1px;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
   transition: all 0.15s;
 }
 
