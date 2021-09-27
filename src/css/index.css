@@ -725,19 +725,31 @@ footer .copyright a:visited {
     font-size: 4vw;
   }
 }
+.fancy-button {
+  top: 0;
+  left: 0;
+}
+
+/* Colors */
 .hdecor-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: -webkit-flex;
   min-width: 200px;
 }
 
 .hdecor-box.center {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   -webkit-justify-content: flex-start;
 }
 
 @media only screen and (min-width: 800px) {
   .hdecor-box.center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     -webkit-justify-content: center;
   }
