@@ -836,7 +836,6 @@ footer .copyright a:visited {
   /* iOS Safari */
   -webkit-user-select: none;
   /* Safari */
-  -khtml-user-select: none;
   /* Konqueror HTML */
   -moz-user-select: none;
   /* Old versions of Firefox */
@@ -872,6 +871,12 @@ footer .copyright a:visited {
   text-decoration: none;
 }
 
+.fancy-button {
+  top: 0;
+  left: 0;
+}
+
+/* Colors */
 .social {
   display: none;
   padding: 1rem 2rem 1rem 1rem;
@@ -906,17 +911,26 @@ footer .copyright a:visited {
   transition: opacity 0.25s;
 }
 
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  display: inline-block;
+.fancy-button {
+  top: 0;
+  left: 0;
 }
 
-/* Tooltip text */
+/* Colors */
+.tooltip {
+  /* Tooltip container */
+  position: relative;
+  display: inline-block;
+  /* Show the tooltip text when you mouse over the tooltip container */
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 .tooltip .tooltiptext {
   visibility: hidden;
   background-color: rgba(85, 85, 85, 0.9);
-  color: #fff;
+  color: white;
   text-align: left;
   padding: 0.3125em 0.3125em;
   border-radius: 0.375em;
@@ -929,18 +943,12 @@ footer .copyright a:visited {
   margin-left: -3.75em;
   /* Fade in tooltip */
   opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   cursor: context-menu;
+  /* Tooltip arrow pointing to the top */
 }
-
-/* Tooltip text positioned to the right */
-.right .tooltiptext {
-  bottom: -50%;
-  left: 450%;
-  margin-left: -3.75em;
-}
-
-/* Tooltip arrow pointing to the top */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
@@ -952,18 +960,18 @@ footer .copyright a:visited {
   border-color: transparent transparent rgba(85, 85, 85, 0.9) transparent;
 }
 
-/* Tooltip arrow pointing to the left */
+/* Tooltip text positioned to the right */
+.right .tooltiptext {
+  bottom: -50%;
+  left: 450%;
+  margin-left: -3.75em;
+  /* Tooltip arrow pointing to the left */
+}
 .right .tooltiptext::after {
   bottom: 35%;
   left: -3.5%;
   margin-left: -5px;
   border-color: transparent rgba(85, 85, 85, 0.9) transparent transparent;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
 }
 
 header {
