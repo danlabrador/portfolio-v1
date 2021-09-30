@@ -132,7 +132,7 @@ addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, -1, 'https://www.codecademy.c
 
 addSkill('jQuery', 'jquery.svg', [9, 2021], 30, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/0becf7c1cd2bd715f24331dddd23425a');
 
-addSkill('React', 'fab fa-react', [9, 2021], 30, 65);
+addSkill('React', 'fab fa-react', [9, 2021], 35, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/af00e5032d0a68cc84879983f5d8333b?next=true');
 
 addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
