@@ -124,7 +124,7 @@ function addSkill(skill, logo, start, xp, edu=-1, badge1, badge2, badge3){
 // skill, logo, xp, [month, year], edu (-1 if n/a), badge1, badge2, badge3
 addSkill('HTML 5', 'fab fa-html5', [6, 2021], 65, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7');
 
-addSkill('CSS 3', 'fab fa-css3-alt', [6, 2021], 55, 53, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9a5bb1fc45b4281af1fffec93b0aaf05', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/3a62023b0054dc793edc0adecd715fd7');
+addSkill('CSS 3', 'fab fa-css3-alt', [6, 2021], 55, 53, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/9a5bb1fc45b4281af1fffec93b0aaf05', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/3a62023b0054dc793edc0adecd715fd7', 'https://www.codecademy.com/profiles/daniellabrador_/certificates/0a6884fad1dbf4afe5df084d2ec1e7c3?next=true');
 
 addSkill('Sass', 'fab fa-sass', [1, 0], 20, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/eb1ffda40f347629dcef6de33d3f9741'); // April 2018
 
