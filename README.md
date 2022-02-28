@@ -1,6 +1,6 @@
 # **Personal Portfolio Website**
 
-This [site](https://daniellabrador.me) showcases my projects and qualifications as a web developer. All the necessary contact information is provided in the site for potential employers. This was part of [Codecademy's Full-Stack Career Path](https://www.codecademy.com/learn/paths/full-stack-engineer-career-path).
+This [site](https://daniellabrador.com) showcases my projects and qualifications as a web developer. All the necessary contact information is provided in the site for potential employers. This was part of [Codecademy's Full-Stack Career Path](https://www.codecademy.com/learn/paths/full-stack-engineer-career-path).
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ For this project, you will build a personal portfolio site, a static website whe
 
 ## Setup
 
-The site is constantly evolving. To check the latest version of the site, click [here](https://daniellabrador.me).
+The site is constantly evolving. To check the latest version of the site, click [here](https://daniellabrador.com).
 
 ## Sources
 

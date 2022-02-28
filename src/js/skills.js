@@ -132,11 +132,17 @@ addSkill('JavaScript', 'fab fa-js', [6, 2021], 45, -1, 'https://www.codecademy.c
 
 addSkill('jQuery', 'jquery.svg', [9, 2021], 30, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/0becf7c1cd2bd715f24331dddd23425a');
 
-addSkill('React', 'fab fa-react', [9, 2021], 35, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/af00e5032d0a68cc84879983f5d8333b?next=true');
+addSkill('React', 'fab fa-react', [9, 2021], 40, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/af00e5032d0a68cc84879983f5d8333b?next=true');
+
+addSkill('Redux', 'redux.svg', [10, 2021], 20, 10);
 
 addSkill('Node.js', 'fab fa-node-js', [7, 2021], 50, 17);
 
-addSkill('Python 3', 'fab fa-python', [8, 2021], 20, 18);
+// addSkill('Express.js', [10, 2021], 'fas fa-laptop-code', 10, -1);
+
+// addSkill('SQL', [10, 2021], 'fas fa-laptop-code', 10, -1);
+
+// addSkill('Python 3', 'fab fa-python', [8, 2021], 20, 18);
 
 addSkill('C++', 'c++.svg', [9, 2021], 35, -1, 'https://www.codecademy.com/profiles/daniellabrador_/certificates/b74a2390dfc4127fa5d43fe147425ad0');
 
@@ -154,12 +160,6 @@ addSkill('WordPress', 'fab fa-wordpress', [2, 2020], 40, -1);
 
 addSkill('Figma', 'fab fa-figma', [9, 2021], 25, -1);
 
-// addSkill('Redux', 'fas fa-laptop-code', 10, -1);
-
-// addSkill('Express.js', 'fas fa-laptop-code', 10, -1);
-
-// addSkill('SQL', 'fas fa-laptop-code', 10, -1);
-
 
 
 
@@ -176,3 +176,6 @@ for(let i=0; i<progressPeg.length; ++i){
     progressPeg[i].style.left = `calc(${progress} - .75em)`;
     progressPercent[i].style.width = `${progress}`;
 }
+
+// Disable logo icon drag and drop ---------------------------------------------
+$('.skill-icon').on('dragstart', function(event) { event.preventDefault(); });
